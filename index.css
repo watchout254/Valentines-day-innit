@@ -1,0 +1,536 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(95, 82, 7);
+}
+
+h2{
+    position: relative;
+    font-size: 6em;
+    letter-spacing: 15px;
+    color: rgb(163, 43, 43);
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect:below 1px
+    linear-gradient(transparent, black);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%,18%,20%,50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
+        color: skyblue;
+        box-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%, 65.1%, 80%, 90.1%, 92.1%, 100%{
+        color:rgb(245, 245, 245);
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #044a5f,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+    }
+}
+
+.coming-soon {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.day,.hour,.minute,.second {
+    font-size: 3rem;
+}
+
+.waiting {
+    height:50vh;
+}
+
+.home-section{
+    width: 100%;
+    height: 100vh;
+  }
+  
+  header{
+    width: 100%;
+    height: 20vh;
+  }
+  
+  .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .logo{
+    
+  }
+  
+  .ham-menu{
+    display: none;
+  }
+  
+  nav{
+    width: 60%;
+    transform: translateY(0) translateX(0);
+  }
+  
+  .nav-class{
+    display: none;
+  }
+  
+  nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly
+  }
+  
+  li a{
+    text-decoration: none;
+    color: black;
+    padding: 2px 8px;
+    position: relative;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  
+  li a::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    right: 50%;
+    height: 100%;
+    width:0;
+    transition: 0.4s ease-in;
+  }
+  li a::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    height: 100%;
+    width:0;
+    transition: 0.4s ease-in;
+  }
+  
+  li a:hover::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    right: 50%;
+    height: 100%;
+    width: 50%;
+    border-bottom: 1px solid #000;
+  }
+  li a:hover::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    transition: 0.4s ease-in;
+    border-bottom: 1px solid #000;
+  }
+  
+    .active-link{
+      font-weight: 700;
+    }
+  
+ 
+  .navigation{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .next-prev{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+  
+  .indicator{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align:center;
+    padding-bottom: 10px;
+  }
+  
+  .indicator div{
+    display: flex;
+    display: inline-block;
+  }
+  
+  .indicator div div{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    margin:0 4px;
+  }
+  
+  .indicator div div:nth-child(2){
+    background-color: #fff;
+  }
+  
+  main .some-quote{
+    text-align: center;
+    padding-top: 60px;
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+  
+  main .design-btn{
+    margin-top: 160px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  main .design-btn h1{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 3px;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  main .design-btn h1::before{
+    content: '';
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 20%;
+    transition: 0.5s ease-in;
+  }
+  
+  main .design-btn h1::after{
+    content: '';
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    position: absolute;
+    bottom:0;
+    right:0;
+    height: 100%;
+    width: 20%;
+    transition: 0.5s ease-in;
+  }
+  
+  main .design-btn h1:hover::before{
+    width: 50%;
+    height: 0;
+  }
+  main .design-btn h1:hover::after{
+    width: 50%;
+    height: 0;
+  }
+  
+  .home-footer{
+    height: 20vh;
+  }
+  
+  .social-link-icon{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-link-icon div{
+    display: flex;
+    text-align: center;
+  }
+  
+  .social-link-icon div div{
+    margin: 0 10px;
+  } 
+  
+  @media screen and (max-width: 991px){
+    nav{
+      width: 75%;
+    }
+  }
+  @media screen and (max-width: 767px){
+    body{
+      overflow: hidden;
+    }
+    
+    header{
+      height: 15vh;
+      position: relative;
+    }
+    
+  header .container{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+  }
+    
+    .ham-menu{
+      display: block;
+    }
+    
+    nav{
+      display: none;
+    }
+    
+    .container .nav-class{
+      display: block;
+      position: absolute;
+      background-color: rgba(255,255,255,0.8);
+      backdrop-filter: blur(5px);
+      right: 0;
+      bottom: 0;
+      transform: translateY(100%) translateX(100%);
+      z-index: 10;
+      height: 85vh;
+      width: 50%;
+      transition: 0.3s linear;
+    }
+    
+    .nav-class ul{
+         display: flex;
+         flex-direction: column;
+    }
+    
+    .nav-class ul li{
+      margin: 20px;
+    }
+    
+    li a::before{
+      content: '';
+      position: relative;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+    }
+      li a::after{
+      content: '';
+      position: relative;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+    }
+     li a:hover::before{
+       content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-bottom: 1px solid #000;
+    }
+     li a:hover::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+    }
+    
+    
+    main{
+      height: 65vh;
+    }
+    
+    main .design-btn{
+    margin-top: 200px;
+    text-align: center;
+    color: #ffffff;
+  }
+    
+    main .design-btn h1{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 3px;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+    
+    .next-prev{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+    
+  main .some-quote{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    font-size: 1.4rem;
+  }
+  }
+  @media screen and (max-width: 575px){
+    body{
+      overflow: hidden;
+    }
+    
+    header{
+      height: 15vh;
+      position: relative;
+    }
+    
+  header .container{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+  }
+    
+    .ham-menu{
+      display: block;
+    }
+    
+    nav{
+      display: none;
+    }
+    
+    .container .nav-class{
+      display: block;
+      position: absolute;
+      background-color: rgba(255,255,255,0.8);
+      backdrop-filter: blur(5px);
+      right: 0;
+      bottom: 0;
+      transform: translateY(100%) translateX(100%);
+      z-index: 10;
+      height: 85vh;
+      width: 50%;
+      transition: 0.3s linear;
+    }
+    
+    .nav-class ul{
+         display: flex;
+         flex-direction: column;
+    }
+    
+    .nav-class ul li{
+      margin: 20px;
+    }
+    
+    li a::before{
+      content: '';
+      position: relative;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+    }
+      li a::after{
+      content: '';
+      position: relative;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+    }
+     li a:hover::before{
+       content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-bottom: 1px solid #000;
+    }
+     li a:hover::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+    }
+    
+    
+    main{
+      height: 65vh;
+    }
+    
+    main .design-btn{
+    margin-top: 200px;
+    text-align: center;
+    color: #ffffff;
+  }
+    
+    main .design-btn h1{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 3px;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+    
+    .next-prev{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+    
+  main .some-quote{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    font-size: 1.4rem;
+  }
+
+}
+  
